@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fanpian.fragments.SearchFragment">
+
+    <!-- 顶部搜索,取消按钮-->
+    <LinearLayout
+        android:id="@+id/search_top_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical">
+        <!-- 查找-->
+        <ImageView
+            android:id="@+id/main_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/red_search"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@null"
+            android:hint="输入要搜索的电影名"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ef9590"
+            android:text="取消"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:text="蓝色搜索"
+        android:background="#0000ff"/>
+
+</LinearLayout>

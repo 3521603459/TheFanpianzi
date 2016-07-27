@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fanpian.MainActivity">
+
+
+    <!-- 放置ViewPager,里面放置碎片-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+    <!-- 导航条-->
+    <LinearLayout
+        android:id="@+id/main_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 头像,大小固定为40dp,应该由美工决定-->
+        <ImageView
+            android:id="@+id/main_head_portrait"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/index_right"/>
+
+        <!-- 碎片导航条-->
+        <RadioGroup
+            android:id="@+id/main_tab_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/main_tab_personal"
+                android:text="我的"
+                style="@style/MainTabItem"/>
+            <RadioButton
+                android:id="@+id/main_tab_recommend"
+                android:text="推荐"
+                style="@style/MainTabItem"/>
+            <RadioButton
+                android:id="@+id/main_tab_discover"
+                android:text="发现"
+                style="@style/MainTabItem"/>
+        </RadioGroup>
+
+        <!-- 查找-->
+        <ImageView
+            android:id="@+id/main_search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/red_search"/>
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>
